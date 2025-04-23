@@ -8,19 +8,18 @@ export default defineConfig({
     react(),
 
     Sitemap({
-      // 必須：あなたのサイトのルート URL（末尾スラッシュなし）
+      // サイトのルート URL（末尾スラッシュなし）
       hostname: 'https://kirishima-hp.vercel.app',
 
-      // SPA なので手動で全ルートを列挙（dynamicRoutes は string[] 型）
+      // SPA の手動ルート一覧（ホームは自動生成されるので除外）
       dynamicRoutes: [
-        '/',
         '/about',
         '/blog',
         '/portfolio',
         '/contact',
       ],
 
-      // （任意）除外したいパスがあれば指定
+      // （任意）生成から除外したいパス
       // exclude: ['/secret-page']
     })
   ]
