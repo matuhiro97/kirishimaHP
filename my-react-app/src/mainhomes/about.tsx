@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 
 // 共通スタイルオブジェクト
 const sectionStyle = {
-  width: '100vw',
+  width: '100%',
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
