@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 
 type BlogCardProps = {
   slug: string;
@@ -16,25 +22,35 @@ const cardVariants = {
   },
 };
 
-export const BlogCard: React.FC<BlogCardProps> = ({ slug, title, date, cover }) => (
-  <motion.li
+export const BlogCard: React.FC<BlogCardProps> = ({
+  slug,
+  title,
+  date,
+  cover,
+}) => (
+  <motion.div
     variants={cardVariants}
     initial="rest"
     whileHover="hover"
-    className="overflow-hidden rounded-2xl bg-white shadow-md transition-shadow duration-300"
+    style={{ listStyle: "none" }}
   >
-    <Link to={`/blog/${slug}`} className="group block">
-      <img
-        src={cover}
-        alt={title}
-        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-      />
-      <div className="p-4">
-        <h2 className="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors">
-          {title}
-        </h2>
-        <time className="block mt-1 text-sm text-gray-500">{date}</time>
-      </div>
+    <Link to={`/blog/${slug}`} style={{ textDecoration: "none" }}>
+      <Card sx={{ height: "100%", borderRadius: 2, boxShadow: 3 }}>
+        <CardMedia component="img" height="160" image={cover} alt={title} />
+        <CardContent>
+          <Typography
+            gutterBottom
+            variant="h6"
+            component="div"
+            color="text.primary"
+          >
+            {title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {date}
+          </Typography>
+        </CardContent>
+      </Card>
     </Link>
-  </motion.li>
+  </motion.div>
 );

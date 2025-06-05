@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BlogCard } from "../components/BlogCard";
+import { Box, Container, Grid, Typography } from "@mui/material";
 
 type Cover = {
   slug: string;
@@ -22,22 +23,20 @@ const BlogIndex: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-yellow-50 min-h-screen">      {/* ページ全体を淡い黄色に */}
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold text-yellow-900 mb-8">Blog</h1>
-        <ul className="list-none grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <Box sx={{ bgcolor: "grey.50", minHeight: "100vh" }}>
+      <Container maxWidth="lg" sx={{ py: 8 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Blog
+        </Typography>
+        <Grid container spacing={4} component="ul" sx={{ p: 0, listStyle: "none" }}>
           {covers.map((item) => (
-            <BlogCard
-              key={item.slug}
-              slug={item.slug}
-              title={item.title}
-              date={item.date}
-              cover={item.cover}
-            />
+            <Grid item key={item.slug} xs={12} sm={6} md={4} component="li" sx={{ listStyle: "none" }}>
+              <BlogCard slug={item.slug} title={item.title} date={item.date} cover={item.cover} />
+            </Grid>
           ))}
-        </ul>
-      </div>
-    </div>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
