@@ -7,6 +7,7 @@ import Blog from "./mainhomes/blog";
 import Contact from "./mainhomes/contact";
 import Portfolio from "./mainhomes/portfolio";
 import About from "./mainhomes/about";
+import BlogPost from "./blog/BlogPost";
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
