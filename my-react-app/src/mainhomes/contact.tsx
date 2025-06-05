@@ -1,4 +1,4 @@
-// src/pages/Contact.tsx
+// src/mainhomes/contact.tsx
 import React, { useState } from "react";
 
 const GOOGLE_FORM_ACTION =
