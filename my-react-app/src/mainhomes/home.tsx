@@ -1,39 +1,49 @@
 import React from "react";
+import About from "./about";
+import Blog from "./blog";
+import Portfolio from "./portfolio";
+import Contact from "./contact";
 
 const Home: React.FC = () => {
   return (
-    <div style={styles.container}>
-      <div style={styles.content}>
-        <h1 style={styles.title}>霧島 aka hima</h1>
-        <p style={styles.subtitle}>学士(工学) / エンジニアになりたい人</p>
-        <div style={styles.buttonGroup}>
-          <a
-            href="https://github.com/matuhiro97"
-            style={styles.button}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://www.instagram.com/msuhro.6?igsh=MmZoNW9xdTRrbW"
-            style={styles.button}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-          <a
-            href="https://x.com/akahima24424?s=21"
-            style={styles.button}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            X
-          </a>
+    <>
+      <div style={styles.container}>
+        <div style={styles.content}>
+          <h1 style={styles.title}>霧島 aka hima</h1>
+          <p style={styles.subtitle}>学士(工学) / エンジニアになりたい人</p>
+          <div style={styles.buttonGroup}>
+            <a
+              href="https://github.com/matuhiro97"
+              style={styles.button}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.instagram.com/msuhro.6?igsh=MmZoNW9xdTRrbW"
+              style={styles.button}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://x.com/akahima24424?s=21"
+              style={styles.button}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              X
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+      <About />
+      <Blog />
+      <Portfolio />
+      <Contact />
+    </>
   );
 };
 
