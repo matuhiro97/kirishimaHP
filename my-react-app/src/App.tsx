@@ -5,7 +5,7 @@ import Footer from "./components/footer";  // 追加
 import Home from "./mainhomes/home";
 import Blog from "./mainhomes/blog";
 import Contact from "./mainhomes/contact";
-import Portfolio from "./mainhomes/portforio";
+import Portfolio from "./mainhomes/portfolio";
 import About from "./mainhomes/about";
 
 const App: React.FC = () => {
