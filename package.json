@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "test": "vitest"
+    "dev": "vite --config my-react-app/vite.config.ts",
+    "build": "tsc -b my-react-app && vite build --config my-react-app/vite.config.ts",
+    "lint": "eslint my-react-app",
+    "preview": "vite preview --config my-react-app/vite.config.ts",
+    "test": "vitest --root my-react-app"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
