@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 
 const GOOGLE_FORM_ACTION =
-  "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";  // ★YOUR_FORM_IDを置き換えてください
+  import.meta.env.VITE_CONTACT_FORM_URL ??
+  "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";
 
 const Contact: React.FC = () => {
   const [sending, setSending] = useState(false);
