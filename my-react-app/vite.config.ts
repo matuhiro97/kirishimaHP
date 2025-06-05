@@ -22,5 +22,8 @@ export default defineConfig({
       // （任意）生成から除外したいパス
       // exclude: ['/secret-page']
     })
-  ]
+  ],
+  test: {
+    environment: 'jsdom'
+  }
 })
