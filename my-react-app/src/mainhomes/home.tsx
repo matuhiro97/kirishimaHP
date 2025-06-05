@@ -41,7 +41,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   container: {
     backgroundColor: "#009688",
     height: "100vh",
-    width: "100vw",
+    width: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
