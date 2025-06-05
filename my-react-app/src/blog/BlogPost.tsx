@@ -1,7 +1,10 @@
 import React, { useEffect, useState, Suspense } from "react";
 import { useParams } from "react-router-dom";
 
-const modules = import.meta.glob("./contents/*.tsx");
+interface BlogPostModule {
+  default: React.FC;
+}
+const modules: Record<string, () => Promise<BlogPostModule>> = import.meta.glob("./contents/*.tsx");
 
 const NotFound: React.FC = () => <div>Not Found</div>;
 
@@ -13,7 +16,7 @@ const BlogPost: React.FC = () => {
     if (!slug) return;
     const importer = modules[`./contents/${slug}.tsx`];
     if (importer) {
-      importer().then((mod: any) => {
+      importer().then((mod: BlogPostModule) => {
         setComponent(() => mod.default);
       });
     } else {
