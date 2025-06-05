@@ -8,6 +8,7 @@ import Contact from "./mainhomes/contact";
 import Portfolio from "./mainhomes/portfolio";
 import About from "./mainhomes/about";
 import BlogPost from "./blog/BlogPost";
+import NotFound from "./mainhomes/NotFound";
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
