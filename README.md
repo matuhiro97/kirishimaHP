@@ -39,4 +39,4 @@ npm run build
 
 ## デプロイ
 
-Vercel でのデプロイを想定しています。`my-react-app/vercel.json` では `sitemap.xml` に `Content-Type: application/xml` ヘッダーを付与するほか、React Router のために全てのリクエストを `index.html` にリライトする設定を追加しています。特別な環境変数は不要ですが、Node.js 18 以上の環境で動作させてください。
+Vercel でのデプロイを想定しています。`my-react-app/vercel.json` では `sitemap.xml` に `Content-Type: application/xml` ヘッダーを付与するほか、React Router のために全てのリクエストを `index.html` にリライトする設定（`{"source": "\/(.*)", "destination": "/index.html"}`）を追加しています。特別な環境変数は不要ですが、Node.js 18 以上の環境で動作させてください。
