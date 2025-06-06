@@ -1,9 +1,51 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
+
+const HamburgerIcon: React.FC = () => (
+  <span
+    style={{
+      width: 24,
+      height: 16,
+      display: "inline-block",
+      position: "relative",
+    }}
+  >
+    <span
+      style={{
+        position: "absolute",
+        top: 0,
+        width: "100%",
+        height: 2,
+        background: "currentColor",
+        borderRadius: 1,
+      }}
+    />
+    <span
+      style={{
+        position: "absolute",
+        top: "50%",
+        width: "100%",
+        height: 2,
+        background: "currentColor",
+        borderRadius: 1,
+        transform: "translateY(-50%)",
+      }}
+    />
+    <span
+      style={{
+        position: "absolute",
+        bottom: 0,
+        width: "100%",
+        height: 2,
+        background: "currentColor",
+        borderRadius: 1,
+      }}
+    />
+  </span>
+);
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,7 +80,7 @@ const Header: React.FC = () => {
           onClick={() => setMenuOpen(true)}
           sx={{ color: "white", display: { xs: "block", md: "none" } }}
         >
-          <MenuIcon sx={{ fontSize: 30 }} />
+          <HamburgerIcon />
         </IconButton>
 
         {/* ナビゲーションメニュー（PC用） */}
