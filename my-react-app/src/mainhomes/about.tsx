@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Chip from '@mui/material/Chip';
 
 // 共通スタイルオブジェクト
 const sectionStyle = {
@@ -154,6 +155,15 @@ const About: React.FC = () => {
         <TimelineItem year="2023" description="ラウンドワン" />
         <TimelineItem year="2024" description="wowd" />
         <TimelineItem year="2025" description="パフェbar" />
+      </Section>
+
+      {/* Section 4: スキル */}
+      <Section id="skills" title="スキル" backgroundColor="#00796b">
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+          {['React', 'TypeScript', 'Node.js', 'Python'].map((skill) => (
+            <Chip key={skill} label={skill} color="primary" variant="outlined" />
+          ))}
+        </Box>
       </Section>
     </>
   );
