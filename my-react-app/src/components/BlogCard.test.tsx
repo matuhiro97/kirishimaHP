@@ -9,7 +9,7 @@ test('navigates to the blog post when clicked', async () => {
   render(
     <Router location={history.location} navigator={history}>
       <ul>
-        <BlogCard slug="001" title="Test Post" date="2024-01-01" cover="/img.jpg" />
+        <BlogCard slug="001" title="Test Post" date="2024-01-01" cover="/kirishima.png" />
       </ul>
     </Router>
   )

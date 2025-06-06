@@ -1,7 +1,7 @@
 [
     {
       "slug": "001",
-      "img": "/portfoliocover/img/00.png",
+      "img": "/kirishima.png",
       "title": "Portfolio Title 1",
       "description": "This is a description of the first project.",
       "tags": ["React", "TypeScript", "UI"],
@@ -9,7 +9,7 @@
     },
     {
       "slug": "002",
-      "img": "/portfoliocover/img/01.png",
+      "img": "/kirishima.png",
       "title": "Portfolio Title 2",
       "description": "This is a description of the second project.",
       "tags": ["Flutter", "Firebase"],
@@ -17,7 +17,7 @@
     },
     {
       "slug": "003",
-      "img": "/portfoliocover/img/02.png",
+      "img": "/kirishima.png",
       "title": "Portfolio Title 3",
       "description": "This is a description of the third project.",
       "tags": ["Python", "Flask", "API"],
@@ -25,7 +25,7 @@
     },
     {
       "slug": "004",
-      "img": "/portfoliocover/img/03.png",
+      "img": "/kirishima.png",
       "title": "Portfolio Title 4",
       "description": "This is a description of the fourth project.",
       "tags": ["Unity", "C#", "GameDev"],
@@ -33,7 +33,7 @@
     },
     {
       "slug": "005",
-      "img": "/portfoliocover/img/04.png",
+      "img": "/kirishima.png",
       "title": "Portfolio Title 5",
       "description": "This is a description of the fifth project.",
       "tags": ["Docker", "DevOps"],
@@ -41,7 +41,7 @@
     },
     {
       "slug": "006",
-      "img": "/portfoliocover/img/05.png",
+      "img": "/kirishima.png",
       "title": "Portfolio Title 6",
       "description": "This is a description of the sixth project.",
       "tags": ["HTML", "CSS", "JavaScript"],
@@ -49,7 +49,7 @@
     },
     {
       "slug": "007",
-      "img": "/portfoliocover/img/06.png",
+      "img": "/kirishima.png",
       "title": "Portfolio Title 7",
       "description": "This is a description of the seventh project.",
       "tags": ["AI", "YOLO", "Vision"],
@@ -57,7 +57,7 @@
     },
     {
       "slug": "008",
-      "img": "/portfoliocover/img/07.png",
+      "img": "/kirishima.png",
       "title": "Portfolio Title 8",
       "description": "This is a description of the eighth project.",
       "tags": ["Notion", "Documentation"],
@@ -65,7 +65,7 @@
     },
     {
       "slug": "009",
-      "img": "/portfoliocover/img/08.png",
+      "img": "/kirishima.png",
       "title": "Portfolio Title 9",
       "description": "This is a description of the ninth project.",
       "tags": ["Vue", "Vite"],
@@ -73,7 +73,7 @@
     },
     {
       "slug": "010",
-      "img": "/portfoliocover/img/09.png",
+      "img": "/kirishima.png",
       "title": "Portfolio Title 10",
       "description": "This is a description of the tenth project.",
       "tags": ["Hackathon", "TeamDev"],

@@ -11,7 +11,7 @@ test('navigates to the portfolio post when clicked', async () => {
       <ul>
         <PortfolioCard
           slug="001"
-          img="/img.jpg"
+          img="/kirishima.png"
           title="Project"
           description="desc"
           tags={[]}
