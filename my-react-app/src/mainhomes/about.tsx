@@ -125,7 +125,7 @@ const About: React.FC = () => {
       {/* Section 1: 何者なのか */}
       <Section id="about" title="なにもの？" backgroundColor="#3949ab">
         <Typography variant="body1" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}>
-          情報系学部の3年生です。Web,アプリ,ゲームなど作ったりしています。
+          俺は今4年生です。Web,アプリ,ゲームなど作ったりしています。
         </Typography>
         <Typography variant="body1" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}>
           登山、キャンプ、旅行もそこそこ好きです。
@@ -153,6 +153,7 @@ const About: React.FC = () => {
         <TimelineItem year="2022" description="smolt" />
         <TimelineItem year="2023" description="ラウンドワン" />
         <TimelineItem year="2024" description="wowd" />
+        <TimelineItem year="2025" description="パフェbar" />
       </Section>
     </>
   );
