@@ -1,6 +1,15 @@
 // src/components/PortfolioCard.tsx
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Chip,
+  Stack,
+} from "@mui/material";
 
 type PortfolioProps = {
   slug: string;
@@ -9,6 +18,13 @@ type PortfolioProps = {
   description: string;
   tags: string[];
   date: string;
+};
+
+const cardVariants = {
+  hover: {
+    scale: 1.03,
+    boxShadow: "0 10px 20px rgba(0,0,0,0.15)",
+  },
 };
 
 export const PortfolioCard: React.FC<PortfolioProps> = ({
@@ -20,22 +36,28 @@ export const PortfolioCard: React.FC<PortfolioProps> = ({
   date,
 }) => {
   return (
-    <Link to={`/portfolio/${slug}`} style={{ textDecoration: "none", color: "inherit" }}>
-      <div style={{ border: "1px solid #333", width: 300 }}>
-        <div style={{ height: 150, backgroundColor: "#17647c" }}>
-          <img src={img} alt={title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-        </div>
-        <div style={{ backgroundColor: "#eee", padding: "10px" }}>
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <div style={{ margin: "10px 0" }}>
-            {tags.map((tag, i) => (
-              <span key={i} style={{ marginRight: 8 }}>{tag}</span>
-            ))}
-          </div>
-          <small>{date}</small>
-        </div>
-      </div>
-    </Link>
+    <motion.div variants={cardVariants} initial="rest" whileHover="hover" style={{ listStyle: "none" }}>
+      <Link to={`/portfolio/${slug}`} style={{ textDecoration: "none", color: "inherit" }}>
+        <Card sx={{ height: "100%", borderRadius: 2, boxShadow: 3 }}>
+          <CardMedia component="img" height="160" image={img} alt={title} />
+          <CardContent>
+            <Typography gutterBottom variant="h6" component="div" color="text.primary">
+              {title}
+            </Typography>
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+              {description}
+            </Typography>
+            <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
+              {tags.map((tag, i) => (
+                <Chip key={i} label={tag} size="small" />
+              ))}
+            </Stack>
+            <Typography variant="caption" color="text.secondary">
+              {date}
+            </Typography>
+          </CardContent>
+        </Card>
+      </Link>
+    </motion.div>
   );
 };
