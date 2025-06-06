@@ -1,5 +1,6 @@
 [
     {
+      "slug": "001",
       "img": "/portfoliocover/img/00.png",
       "title": "Portfolio Title 1",
       "description": "This is a description of the first project.",
@@ -7,6 +8,7 @@
       "date": "2025-04-25"
     },
     {
+      "slug": "002",
       "img": "/portfoliocover/img/01.png",
       "title": "Portfolio Title 2",
       "description": "This is a description of the second project.",
@@ -14,6 +16,7 @@
       "date": "2025-04-24"
     },
     {
+      "slug": "003",
       "img": "/portfoliocover/img/02.png",
       "title": "Portfolio Title 3",
       "description": "This is a description of the third project.",
@@ -21,6 +24,7 @@
       "date": "2025-04-23"
     },
     {
+      "slug": "004",
       "img": "/portfoliocover/img/03.png",
       "title": "Portfolio Title 4",
       "description": "This is a description of the fourth project.",
@@ -28,6 +32,7 @@
       "date": "2025-04-22"
     },
     {
+      "slug": "005",
       "img": "/portfoliocover/img/04.png",
       "title": "Portfolio Title 5",
       "description": "This is a description of the fifth project.",
@@ -35,6 +40,7 @@
       "date": "2025-04-21"
     },
     {
+      "slug": "006",
       "img": "/portfoliocover/img/05.png",
       "title": "Portfolio Title 6",
       "description": "This is a description of the sixth project.",
@@ -42,6 +48,7 @@
       "date": "2025-04-20"
     },
     {
+      "slug": "007",
       "img": "/portfoliocover/img/06.png",
       "title": "Portfolio Title 7",
       "description": "This is a description of the seventh project.",
@@ -49,6 +56,7 @@
       "date": "2025-04-19"
     },
     {
+      "slug": "008",
       "img": "/portfoliocover/img/07.png",
       "title": "Portfolio Title 8",
       "description": "This is a description of the eighth project.",
@@ -56,6 +64,7 @@
       "date": "2025-04-18"
     },
     {
+      "slug": "009",
       "img": "/portfoliocover/img/08.png",
       "title": "Portfolio Title 9",
       "description": "This is a description of the ninth project.",
@@ -63,6 +72,7 @@
       "date": "2025-04-17"
     },
     {
+      "slug": "010",
       "img": "/portfoliocover/img/09.png",
       "title": "Portfolio Title 10",
       "description": "This is a description of the tenth project.",

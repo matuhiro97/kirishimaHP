@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { PortfolioCard } from "../components/PortfolioCard";
 
 type PortfolioData = {
+  slug: string;
   img: string;
   title: string;
   description: string;
@@ -30,8 +31,8 @@ const Portfolio: React.FC = () => {
           justifyContent: "center", // ← ここで中央寄せ
         }}
       >
-        {data.map((item, i) => (
-          <PortfolioCard key={i} {...item} />
+        {data.map((item) => (
+          <PortfolioCard key={item.slug} {...item} />
         ))}
       </div>
     </div>
