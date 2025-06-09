@@ -1,9 +1,16 @@
 {
-  "files": [],
-  "include": [],
-  "exclude": ["my-react-app"],
-  "references": [{ "path": "./my-react-app" }],
   "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "types": ["vitest/globals"]
-  }
+  },
+  "include": ["my-react-app/src"]
 }

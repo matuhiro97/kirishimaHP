@@ -5,7 +5,9 @@ interface PortfolioPostModule {
   default: React.FC;
 }
 
-const modules = import.meta.glob<PortfolioPostModule>("./contents/*.tsx");
+// Dynamically import all .tsx content modules
+const modules: Record<string, () => Promise<PortfolioPostModule>> =
+  import.meta.glob<PortfolioPostModule>("./contents/*.tsx");
 
 const NotFound: React.FC = () => <div>Not Found</div>;
 
@@ -17,7 +19,7 @@ const PortfolioPost: React.FC = () => {
     if (!slug) return;
     const importer = modules[`./contents/${slug}.tsx`];
     if (importer) {
-      importer().then((mod: PortfolioPostModule) => {
+      importer().then((mod) => {
         setComponent(() => mod.default);
       });
     } else {
