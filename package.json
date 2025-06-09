@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    // Viteのconfigを明示している場合はこちら（my-react-app/vite.config.tsがあるなら）
-    "dev": "vite --config my-react-app/vite.config.ts",
-    "build": "vite build --config my-react-app/vite.config.ts",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "preview": "vite preview --config my-react-app/vite.config.ts",
     "lint": "eslint \"my-react-app/src/**/*.{js,jsx,ts,tsx}\" --fix",
     "test": "vitest"
