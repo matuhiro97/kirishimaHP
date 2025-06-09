@@ -8,7 +8,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/portfolio", "destination": "/portfolio/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
-  
