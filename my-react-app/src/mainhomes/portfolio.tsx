@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { PortfolioCard } from "../components/PortfolioCard";
+import { Box, Container, Grid, Typography } from "@mui/material";
 
 type PortfolioData = {
   slug: string;
@@ -21,21 +22,20 @@ const Portfolio: React.FC = () => {
   }, []);
 
   return (
-    <div style={{ padding: "2rem", marginTop: "100px" }}>
-
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: 20,
-          justifyContent: "center", // ← ここで中央寄せ
-        }}
-      >
-        {data.map((item) => (
-          <PortfolioCard key={item.slug} {...item} />
-        ))}
-      </div>
-    </div>
+    <Box sx={{ bgcolor: "grey.50", minHeight: "100vh" }}>
+      <Container maxWidth="lg" sx={{ py: 8 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Portfolio
+        </Typography>
+        <Grid container spacing={4} component="ul" sx={{ p: 0, listStyle: "none" }}>
+          {data.map((item) => (
+            <Grid item key={item.slug} xs={12} sm={6} md={4} component="li" sx={{ listStyle: "none" }}>
+              <PortfolioCard {...item} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
