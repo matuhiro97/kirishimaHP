@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --config my-react-app/vite.config.ts",
-    "build": "tsc -b my-react-app && vite build --config my-react-app/vite.config.ts",
-    "lint": "eslint my-react-app",
-    "preview": "vite preview --config my-react-app/vite.config.ts",
-    "test": "vitest --root my-react-app"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "test": "vitest"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -31,10 +31,12 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "typescript": "~5.7.2",
-    "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
     "vite-plugin-sitemap": "^0.7.1",
     "@testing-library/react": "^14.2.1",
-    "vitest": "^1.6.0"
+    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "eslint-plugin-react": "^7.34.0",
+    "vitest": "^1.5.0"
   }
 }
