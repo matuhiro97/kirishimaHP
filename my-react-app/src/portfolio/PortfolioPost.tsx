@@ -5,8 +5,7 @@ interface PortfolioPostModule {
   default: React.FC;
 }
 
-const modules: Record<string, () => Promise<PortfolioPostModule>> =
-  import.meta.glob("./contents/*.tsx");
+const modules = import.meta.glob<PortfolioPostModule>("./contents/*.tsx");
 
 const NotFound: React.FC = () => <div>Not Found</div>;
 

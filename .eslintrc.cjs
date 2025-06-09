@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'react'],
   extends: [
@@ -15,4 +16,8 @@ module.exports = {
       version: 'detect',
     },
   },
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+  },
+  ignorePatterns: [],
 }

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 interface BlogPostModule {
   default: React.FC;
 }
-const modules: Record<string, () => Promise<BlogPostModule>> = import.meta.glob("./contents/*.tsx");
+const modules = import.meta.glob<BlogPostModule>("./contents/*.tsx");
 
 const NotFound: React.FC = () => <div>Not Found</div>;
 
