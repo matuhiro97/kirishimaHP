@@ -1,0 +1,9 @@
+{
+  "files": [],
+  "include": [],
+  "exclude": ["my-react-app"],
+  "references": [{ "path": "./my-react-app" }],
+  "compilerOptions": {
+    "types": ["vitest/globals"]
+  }
+}

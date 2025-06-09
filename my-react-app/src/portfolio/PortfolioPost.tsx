@@ -1,13 +1,11 @@
 import React, { useEffect, useState, Suspense } from "react";
 import { useParams } from "react-router-dom";
 
-interface PortfolioModule {
+interface PortfolioPostModule {
   default: React.FC;
 }
 
-const modules: Record<string, () => Promise<PortfolioModule>> = import.meta.glob(
-  "./contents/*.tsx"
-);
+const modules = import.meta.glob<PortfolioPostModule>("./contents/*.tsx");
 
 const NotFound: React.FC = () => <div>Not Found</div>;
 
@@ -19,7 +17,7 @@ const PortfolioPost: React.FC = () => {
     if (!slug) return;
     const importer = modules[`./contents/${slug}.tsx`];
     if (importer) {
-      importer().then((mod: PortfolioModule) => {
+      importer().then((mod: PortfolioPostModule) => {
         setComponent(() => mod.default);
       });
     } else {
