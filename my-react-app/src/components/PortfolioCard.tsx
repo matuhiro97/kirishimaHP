@@ -15,8 +15,6 @@ type PortfolioProps = {
   slug: string;
   img: string;
   title: string;
-  description: string;
-  tags: string[];
   date: string;
 };
 
@@ -31,8 +29,6 @@ export const PortfolioCard: React.FC<PortfolioProps> = ({
   slug,
   img,
   title,
-  description,
-  tags,
   date,
 }) => {
   return (
@@ -44,15 +40,7 @@ export const PortfolioCard: React.FC<PortfolioProps> = ({
             <Typography gutterBottom variant="h6" component="div" color="text.primary">
               {title}
             </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-              {description}
-            </Typography>
-            <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
-              {tags.map((tag, i) => (
-                <Chip key={i} label={tag} size="small" />
-              ))}
-            </Stack>
-            <Typography variant="caption" color="text.secondary">
+            <Typography variant="body2" color="text.secondary">
               {date}
             </Typography>
           </CardContent>

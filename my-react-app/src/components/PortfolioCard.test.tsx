@@ -14,8 +14,6 @@ test('navigates to the portfolio post when clicked', async () => {
           slug="001"
           img="/img.jpg"
           title="Project"
-          description="desc"
-          tags={[]}
           date="2024-01-01"
         />
       </ul>

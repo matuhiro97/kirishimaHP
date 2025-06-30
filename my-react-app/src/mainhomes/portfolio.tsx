@@ -30,7 +30,7 @@ const Portfolio: React.FC = () => {
         <Grid container spacing={4} component="ul" sx={{ p: 0, listStyle: "none" }}>
           {data.map((item) => (
             <Grid item key={item.slug} xs={12} sm={6} md={4} component="li" sx={{ listStyle: "none" }}>
-              <PortfolioCard {...item} />
+              <PortfolioCard slug={item.slug} img={item.img} title={item.title} date={item.date} />
             </Grid>
           ))}
         </Grid>
